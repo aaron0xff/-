@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Basic HTML Page</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+      }
+      .important {
+        font-size: 20px;
+        padding: 10px;
+        color: red;
+      }
+
+
+      .card {
+        width: 200px;
+        padding: 20px;
+        border: 5px solid #333;
+        margin-bottom: 12px;
+      }
+      .card-a {
+        box-sizing: content-box;
+      }
+      .card-b {
+        box-sizing: border-box;
+      }
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+        position: absolute;
+        top: 0;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1rem;
+    }
+
+    @media (max-width: 480px) {
+      nav {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .nav-links {
+        flex-wrap: wrap;
+        gap: 0.75rem;
+      }
+    }
+
+    .layout { display: grid; grid-template-columns: 1fr; }
+
+    @media (min-width: 768px) {
+      .layout { grid-template-columns: 1fr 2fr; }
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,
+        minmax(min(100%, 240px), 1fr));
+      gap: 1rem;
+    }
+
+    .gallery-card {
+      min-width: 0;
+      padding: 1rem;
+      border: 1px solid #777;
+      border-radius: 0.25rem;
+    }
+
+    .layout > *,
+    .gallery > * {
+      overflow-wrap: anywhere;
+    }
+
+  </style>
+  </head>
+  <body>
+    <h1>Hello, World!</h1>
+    <p class="important">An important red paragraph</p>
+    <p class="important" style="color: green;">An important green paragraph which is green because the color has been overridden inline</p>
+
+
+    <div class="card card-a">Allegedly box A which is big</div>
+    <div class="card card-b">Allegedly box B which is smol(-er)</div>
+    
+        <nav>
+          <strong>Example of a gallery</strong>
+          <div class="nav-links">
+            <a href="#gallery">Gallery</a>
+            <a href="#">Another page 1</a>
+            <a href="#">Another page 2</a>
+          </div>
+        </nav>
+
+      <main>
+        <h2 id="gallery">Gallery</h2>
+        <section class="gallery">
+          <article class="gallery-card"><h3>Card 1</h3><p>Example content for card 1.</p></article>
+          <article class="gallery-card"><h3>Card 2</h3><p>Example content for card 2.</p></article>
+          <article class="gallery-card"><h3>Card 3</h3><p>Example content for card 3.</p></article>
+          <article class="gallery-card"><h3>Card 4</h3><p>Example content for card 4.</p></article>
+          <article class="gallery-card"><h3>Card 5</h3><p>Example content for card 5.</p></article>
+          <article class="gallery-card"><h3>Card 6</h3><p>Example content for card 6.</p></article>
+        </section>
+      </main>
+  </body>
+</html>
