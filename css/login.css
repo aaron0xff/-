@@ -94,3 +94,8 @@ button:hover {
 .register-text a:hover {
   color: #024A76;
 }
+
+#loginForm {
+  display: flex;
+  flex-direction: column;
+}
