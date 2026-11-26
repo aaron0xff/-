@@ -1,0 +1,149 @@
+body,
+html {
+    background: #332e90;
+    color: #e2e8f0;
+    margin-top: 30px;
+    margin-bottom: 60px;
+    height: auto;
+    min-height: 100vh;
+}
+
+.page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    width: 100%;
+}
+
+.card {
+    max-width: 650px;
+    width: 100%;
+    background: #151920;
+    padding: 35px 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+}
+
+h1 {
+    text-align: center;
+    color: #f6c85f;
+    margin-top: 0;
+    margin-bottom: 25px;
+    font-size: 26px;
+}
+
+.row {
+    margin-bottom: 16px;
+    text-align: left;
+}
+
+.row label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+    font-size: 13px;
+    color: #cbd5e1;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 6px;
+    border: 1px solid #4a5568;
+    background: #3e4856;
+    color: #ffffff;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #f6c85f;
+}
+
+.two-col {
+    display: flex;
+    gap: 12px;
+}
+
+.two-col > div {
+    flex: 1;
+}
+
+.radio-group input[type="radio"] {
+    display: block;
+    width: auto;
+    margin: 4px auto;
+}
+
+.checkbox-grid {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+.checkbox-grid label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.checkbox-grid input[type="checkbox"] {
+    width: auto;
+    margin-bottom: 4px;
+}
+
+.actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.btn {
+    padding: 10px 18px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    transition: opacity 0.2s, background 0.2s;
+}
+
+.btn.primary {
+    background-color: #f6c85f;
+    color: #1a202c;
+}
+.btn.primary:hover {
+    background-color: #eab308;
+}
+
+.btn.ghost {
+    background-color: transparent;
+    color: #cbd5e1;
+    border: 1px solid #4a5568;
+}
+.btn.ghost:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.login-link {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 12px;
+    color: #94a3b8;
+}
+
+.login-link a {
+    color: #f6c85f;
+    text-decoration: none;
+    font-weight: bold;
+}
+.login-link a:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,54 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proiecte GitHub</title>
+  <link rel="stylesheet" href="{% static 'CSS/repos_style.css' %}">
+  <link rel="stylesheet" href="{% static 'CSS/cursor.css' %}">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Comunitatea de Tehnologii Web 2025</h1>
+      <nav>
+        <ul>
+          <li><a href="{% url 'home' %}">Acasă</a></li>
+          <li><a href="{% url 'galerie' %}">Galerie / Tehnologii</a></li>
+          <li><a href="{% url 'universities' %}">Facultăți</a></li>
+          <li><a href="{% url 'chatbot' %}">ChatBot</a></li>
+          <li><a href="{% url 'repos' %}">Proiecte GitHub</a></li>
+          <li><a href="{% url 'login' %}">Logout</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h2>Caută proiecte GitHub</h2>
+
+    <form id="searchForm">
+      <input id="queryInput" type="text" placeholder="Caută un repo...">
+      <button id="searchBtn" type="submit">Search</button>
+      <button id="exportBtn" type="button" disabled>Export CSV</button>
+    </form>
+
+    <p id="status" aria-live="polite"></p>
+    <div id="results"></div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Comunitatea de Tehnologii Web</p>
+      <p>
+        <a href="https://www.uvt.ro" target="_blank">Universitatea de Vest din Timișoara</a> |
+        <a href="https://info.uvt.ro" target="_blank">Facultatea de Informatică</a>
+      </p>
+    </div>
+  </footer>
+
+  <script src="{% static 'JS/cursor.js' %}"></script>
+  <script src="{% static 'JS/repos.js' %}"></script>
+</body>
+</html>
